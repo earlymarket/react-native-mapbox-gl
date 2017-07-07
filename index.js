@@ -1,15 +1,16 @@
 'use strict';
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
   View,
   NativeModules,
   NativeAppEventEmitter,
   requireNativeComponent,
   findNodeHandle,
-  Platform
+  Platform,
+  ViewPropTypes
 } from 'react-native';
-
+import PropTypes from 'prop-types'
 import cloneDeep from 'lodash/cloneDeep';
 import clone from 'lodash/clone';
 import isEqual from 'lodash/isEqual';
@@ -283,7 +284,7 @@ class MapView extends Component {
   }
 
   static propTypes = {
-    ...View.propTypes,
+    ...ViewPropTypes,
 
     initialZoomLevel: PropTypes.number,
     initialDirection: PropTypes.number,

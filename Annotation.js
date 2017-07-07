@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import {
   View,
   requireNativeComponent,
@@ -7,8 +7,9 @@ import {
   NativeModules,
   Animated,
   findNodeHandle,
+  ViewPropTypes
 } from 'react-native';
-
+import PropTypes from 'prop-types'
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 
 const viewConfig = {
@@ -19,7 +20,7 @@ const viewConfig = {
 };
 
 const propTypes = {
-  ...View.propTypes,
+  ...ViewPropTypes
   id: PropTypes.string.isRequired,
   title: PropTypes.string,
   subtitle: PropTypes.string,
