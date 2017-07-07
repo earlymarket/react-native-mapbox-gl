@@ -20,7 +20,7 @@ const viewConfig = {
 };
 
 const propTypes = {
-  ...ViewPropTypes
+  ...ViewPropTypes,
   id: PropTypes.string.isRequired,
   title: PropTypes.string,
   subtitle: PropTypes.string,
